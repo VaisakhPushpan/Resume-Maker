@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Resume Maker</h1>
+        <a class="text-center text-decoration-none text-decoration-underline text-dark cursor-zoom-in" href="https://vaisakhpushpan.github.io/vaisakhpushpan/">
+            <p>By Vaisakh Pushpan</p>
+        </a>
+        <div class="row" id="first-sec">
+            <div class="col-md-6 col-12">
+                <form class="form-group text-start" id="form1" onsubmit="nextPage(event)">
+                    <h3 class="mt-5 text-center">Personal Infromation</h3>
+                    <div class="form-group mt-5">
+
+                        
+                        <!--image reader input-->
+                        <label for="pimage" class="form-label fw-bold">Select Profile Image</label>
+                        <input type="file"  id="pimage" class="form-control" required>
+
+
+                        <label for="fname" class="form-label mt-3">Full Name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" required>
+                        <label for="phone" class="form-label mt-3">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                       
+                        <!-- <label class="form-label mt-3">Gender</label>
+                        <div class="form-check">
+                            <input type="radio" name="gender" id="gender1" class="form-check-input" value="male">
+                            <label for="gender1" class="form-check-label">Male</label>
+                            <div class="form-check d-inline-block">
+                                <input type="radio" id="gender2" name="gender" class="form-check-input" value="female">
+                                <label for="gender2" class="form-check-label">Female</label>
+                            </div>
+                        </div> -->
+                        <label for="skill" class="form-label mt-3">Skills</label>
+                        <textarea name="skill" id="skill" class="form-control" cols="30" rows="3" required></textarea>
+                        <label for="address" class="form-label mt-3">Address</label>
+                        <textarea name="address" id="address" class="form-control" cols="30" rows="3" required></textarea>
+                        <label for="hobby" class="form-label mt-3">Hobby</label>
+                        <textarea name="hobby" id="hobby" class="form-control" cols="30" rows="3" required></textarea>
+                        <label for="" class="form-label mt-3">Social Media</label>
+                        <input type="text" class="form-control" name="fbname" placeholder="FaceBook" required>
+                        <input type="text" class="form-control mt-3" name="insta" placeholder="Instagram" required>
+                        <input type="text" class="form-control mt-3" name="twitter" placeholder="Twitter" required>
+                    </div>
+                    <button class="btn form-control bg-warning text-white mt-5 nextPageBtn">Go To Next Page</button>
+                </form>
+            </div>
+            <div class="col-md-6 col-12 nextPage" style="display: none;">
+                <form action="" class="form-group mx-5" onsubmit="submitted(event)" id="form2" >
+                    <h3 class="mt-5 text-center">Career Information</h3>
+                    <h5 class="mt-4">Education</h5>
+                    <div class="form-group eduction">
+                        <p class="d-inline-block">1.</p>
+                        <label for="cname" class="form-label mt-2">College/School Name</label>
+                        <input type="text" name="cname" id="cname" class="form-control" required>
+                        <label for="dname" class="form-label mt-3">Division</label>
+                        <input type="text" name="dname" id="dname" class="form-control" required>
+                        <label for="mark" class="form-label mt-3">Mark</label>
+                        <input type="number" name="mark" id="mark" class="form-control" required>
+                        <label for="year" class="form-label mt-3">Year Of Pass Out</label>
+                        <input type="date" name="year" id="year" class="form-control" required>
+                    </div>
+                    <input type="button" value="AddEducation" class="btn bg-primary mt-3 text-white form-control" onclick="AddEducation()">
+                    <h5 class="mt-5">Expereince</h5>
+                    <div class="form-group experience">
+                        <p class="d-inline-block">1.</p>
+                        <label for="kname" class="form-label mt-2">Company Name</label>
+                        <input type="text" name="kname" id="kname" class="form-control" required>
+                        <label for="dsname" class="form-label mt-3">Designation</label>
+                        <input type="text" name="dsname" id="dsname" class="form-control" required>
+                        <label for="fdtae" class="form-label mt-3">From</label>
+                        <input type="date" name="fdate" id="fdate" class="form-control" required>
+                        <label for="Tdate" class="form-label mt-3">To</label>
+                        <input type="date" name="Tdate" id="Tdate" class="form-control" required>
+                    </div>
+                    <input type="button" value="AddExpereince" class="btn bg-primary mt-3 text-white form-control" onclick="AddExpereince()">
+                    <button  class="form-control btn bg-warning text-white mt-5">Submit And Generate CV</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!--Resume Desighn start here-->
+
+        <div class="container pt-5 " id="cv-template" style="height: 1200px;">
+            <h1 class="text-center">CV TEMPLATE</h1>
+            <div class="row mt-5 border border-dark">
+
+                <!--image reader section-->
+                <div class="col-md-4  py-5 bg-dark text-white text-center" >
+                    <img class="image-fluid myimage rounded-circle" src="https://www.freeiconspng.com/thumbs/male-icon/male-icon-4.jpg">
+
+
+                    <div class="container py-4" id="form1-name">
+                        <p>YOUR NAME WILL BE HERE</p>
+                        <p>CONTACT NO HERE</p>
+                        <p>ADDRESS HERE</p>
+                    </div>
+                    <hr/>
+                    <div class="social-media mt-5" >
+                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Facebook</a></p>
+                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Instagram</a></p>
+                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Twitter</a></p>
+                    </div>
+                </div>
+                <div class="col-md-8 cv-template">
+                    <h1 class="text-center py-3">YOUR NAME</h1>
+                    <div class="card mt-4">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Expereince</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus recusandae esse repudiandae, cum, perferendis assumenda enim, maiores reiciendis repellendus molestias reprehenderit libero repellat necessitatibus a neque omnis est modi?</p>
+                        </div>
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus recusandae esse repudiandae, cum, perferendis assumenda enim, maiores reiciendis repellendus molestias reprehenderit libero repellat necessitatibus a neque omnis est modi?</p>
+                        </div>
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus recusandae esse repudiandae, cum, perferendis assumenda enim, maiores reiciendis repellendus molestias reprehenderit libero repellat necessitatibus a neque omnis est modi?</p>
+                        </div>
+                    </div>
+                    <div class="card mt-5">
+                        <div class="card-header bg-dark text-white">
+                            <h3>Hobby</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates possimus recusandae esse repudiandae, cum, perferendis assumenda enim, maiores reiciendis repellendus molestias reprehenderit libero repellat necessitatibus a neque omnis est modi?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
