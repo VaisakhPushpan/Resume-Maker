@@ -1,36 +1,4 @@
 
-//education
-
-function AddEducation() {
-    count = 1;
-    count += 1;
-    let education = document.querySelector(".eduction");
-    education.innerHTML += `${count}. <label for="cname" class="form-label" style="margin-top : 10%"> College/School Name</label>
-    <input type="text" name="cname" id="cname" class="form-control">
-    <label for="dname" class="form-label mt-3">Division</label>
-    <input type="text" name="dname" id="dname" class="form-control">
-    <label for="mark" class="form-label mt-3">Mark</label>
-    <input type="number" name="mark" id="mark" class="form-control">
-    <label for="year" class="form-label mt-3">Year Of Pass Out</label>
-    <input type="date" name="year" id="year" class="form-control">`
-}
-
-//experience
-
-function AddExpereince() {
-    count = 1;
-    count += 1;
-    let experience = document.querySelector(".experience");
-    experience.innerHTML += `${count}. <label for="kname" class="form-label" style="margin-top : 10%">Company Name</label>
-    <input type="text" name="kname" id="kname" class="form-control">
-    <label for="dsname" class="form-label mt-3">Designation</label>
-    <input type="text" name="dsname" id="dsname" class="form-control">
-    <label for="fdtae" class="form-label mt-3">From</label>
-    <input type="date" name="fdate" id="fdate" class="form-control">
-    <label for="Tdate" class="form-label mt-3">To</label>
-    <input type="date" name="Tdate" id="Tdate" class="form-control">`
-}
-
 //to see next page
 
 function nextPage(e) {
@@ -98,12 +66,8 @@ function submitted(e) {
 
       //addind form2 to tepmlate 
       document.querySelector(".cv-template h1").innerHTML = form1data[1].toUpperCase();
-      card[0].innerHTML = `${exp[0].value.toUpperCase()} <br/>${exp[1].value.toUpperCase()} <br/> ${exp[2].value} <br/> ${exp[3].value} <br/><br/>
-      ${exp[4].value.toUpperCase()} <br/>${exp[5].value.toUpperCase()} <br/>${exp[6].value} <br/>${exp[7].value}<br/><br/>
-      `
-      card[1].innerHTML = `${edu[0].value.toUpperCase()} <br/>${edu[1].value.toUpperCase()} <br/>${edu[2].value} <br/>${edu[3].value}<br/><br/>
-      ${edu[4].value.toUpperCase()} <br/>${edu[5].value.toUpperCase()} <br/>${edu[6].value} <br/>${edu[7].value}<br/><br/>
-      `
+      card[0].innerHTML = `Company : ${exp[0].value.toUpperCase()} <br/>Designation : ${exp[1].value.toUpperCase()} <br/>From :  ${exp[2].value} <br/>To : ${exp[3].value}`
+      card[1].innerHTML = `College/School : ${edu[0].value.toUpperCase()} <br/>Department : ${edu[1].value.toUpperCase()} <br/>Mark : ${edu[2].value} <br/>Passout Year : ${edu[3].value}`
       card[2].innerHTML = skills.value;
       card[3].innerHTML = hobby.value;
 
