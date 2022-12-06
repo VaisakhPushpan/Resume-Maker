@@ -72,7 +72,6 @@
                         <label for="year" class="form-label mt-3">Year Of Pass Out</label>
                         <input type="date" name="year" id="year" class="form-control" required>
                     </div>
-                    <input type="button" value="AddEducation" class="btn bg-primary mt-3 text-white form-control" onclick="AddEducation()">
                     <h5 class="mt-5">Expereince</h5>
                     <div class="form-group experience">
                         <p class="d-inline-block">1.</p>
@@ -85,7 +84,6 @@
                         <label for="Tdate" class="form-label mt-3">To</label>
                         <input type="date" name="Tdate" id="Tdate" class="form-control" required>
                     </div>
-                    <input type="button" value="AddExpereince" class="btn bg-primary mt-3 text-white form-control" onclick="AddExpereince()">
                     <button  class="form-control btn bg-warning text-white mt-5">Submit And Generate CV</button>
                 </form>
             </div>
@@ -97,11 +95,11 @@
 
         <div class="container pt-5 " id="cv-template" style="height: 1200px;">
             <h1 class="text-center">CV TEMPLATE</h1>
-            <div class="row mt-5 border border-dark">
+            <div class="row mt-5 border border-black shadow rounded " style="height: 1050px;">
 
                 <!--image reader section-->
-                <div class="col-md-4  py-5 bg-dark text-white text-center" >
-                    <img class="image-fluid myimage rounded-circle" src="https://www.freeiconspng.com/thumbs/male-icon/male-icon-4.jpg">
+                <div class="col-md-4 rounded py-5  text-dark fw-bold text-center" style="background-color: rgba(128, 128, 128,.4);" >
+                    <img class="image-fluid myimage rounded-5" src="https://cdn-icons-png.flaticon.com/512/236/236831.png">
 
 
                     <div class="container py-4" id="form1-name">
@@ -110,13 +108,13 @@
                         <p>ADDRESS HERE</p>
                     </div>
                     <hr/>
-                    <div class="social-media mt-5" >
-                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Facebook</a></p>
-                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Instagram</a></p>
-                        <p><a class="text-decoration-none text-white text-decoration-underline form1-link" href="">Twitter</a></p>
+                    <div class="social-media mt-5 " >
+                        <p><a class="text-decoration-none fw-bold text-dark text-decoration-underline form1-link" href="">Facebook</a></p>
+                        <p><a class="text-decoration-none fw-bold text-dark text-decoration-underline form1-link" href="">Instagram</a></p>
+                        <p><a class="text-decoration-none fw-bold text-dark text-decoration-underline form1-link" href="">Twitter</a></p>
                     </div>
                 </div>
-                <div class="col-md-8 cv-template">
+                <div class="col-md-8 rounded cv-template" style="background-color: rgba(255, 255, 255,.9);">
                     <h1 class="text-center py-3">YOUR NAME</h1>
                     <div class="card mt-4">
                         <div class="card-header bg-dark text-white">
